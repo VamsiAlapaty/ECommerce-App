@@ -1,4 +1,15 @@
-<p>items works!</p>
+<div>
+<p style="color: #CCCCCC">Feel Free to Add Items, But dont forget to Pay It!!!</p>
+<img src="assets/Ocart.png" alt="cart" class="cart">
+</div>
 <h3>Items Added {{itemCount}}</h3>
 <app-checkout *ngIf="itemCount" [addList]="itemCount" (updateItem)="removeItem($event)"></app-checkout>
 <button class="btn btn-primary" (click)="addItem()">Add item</button>
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="assets/apple.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Apples</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
