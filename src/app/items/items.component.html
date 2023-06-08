@@ -1,0 +1,4 @@
+<p>items works!</p>
+<h3>Items Added {{itemCount}}</h3>
+<app-checkout *ngIf="itemCount" [addList]="itemCount" (updateItem)="removeItem($event)"></app-checkout>
+<button class="btn btn-primary" (click)="addItem()">Add item</button>
