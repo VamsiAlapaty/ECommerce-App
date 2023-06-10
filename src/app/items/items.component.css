@@ -3,3 +3,20 @@
     height: 5rem;
     float: right;
 }
+h2{
+    color:  #CCCCCC;
+}
+.itemPage{
+    background-color: #CCCCCC;
+    padding: 0rem 6rem 0rem 6rem;
+}
+.card-title{
+    color: #FF6000;
+}
+.card{
+    width: 18rem;
+}
+.add{
+    border: none;
+    background-color: none;
+}

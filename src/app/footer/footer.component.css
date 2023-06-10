@@ -1,0 +1,14 @@
+.footerScreen{
+    background-color: black;
+    width: 100%;
+    padding: 3rem 6rem 3rem 6rem;
+}
+p{
+    /* background-color: #CCCCCC; */
+    color: #FF6600;
+}
+.stamp{
+    float: right;
+    width: 9rem;
+    margin-top: -7rem;
+}

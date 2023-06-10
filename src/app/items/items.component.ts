@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ItemsComponent {
   itemCount:number =  0;
+  
 
   addItem(){
     this.itemCount++;
@@ -14,5 +15,8 @@ export class ItemsComponent {
 
   removeItem(event:any){
     this.itemCount = event;
+  }
+  displayText(){
+    console.log("Add Item working");
   }
 }
