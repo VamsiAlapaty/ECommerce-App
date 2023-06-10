@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { CheckoutComponent } from '../checkout/checkout.component';
 
 @Component({
   selector: 'app-items',
@@ -7,16 +8,16 @@ import { Component } from '@angular/core';
 })
 export class ItemsComponent {
   itemCount:number =  0;
-  
-
-  addItem(){
+  @ViewChild(CheckoutComponent) refCheckout!: CheckoutComponent;
+  fruits = ['apples', 'oranges', 'bananas'];
+  addItem(): void{
     this.itemCount++;
   }
 
   removeItem(event:any){
     this.itemCount = event;
   }
-  displayText(){
-    console.log("Add Item working");
+  remove(){
+    this.refCheckout.removeItem();
   }
 }

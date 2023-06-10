@@ -16,7 +16,7 @@ h2{
 .card{
     width: 18rem;
 }
-.add{
+.add, .minus{
     border: none;
-    background-color: none;
+    background-color: white;
 }
