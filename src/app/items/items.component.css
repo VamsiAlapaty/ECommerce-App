@@ -13,8 +13,25 @@ h2{
 .card-title{
     color: #FF6000;
 }
+.check{
+    background-color: #FF6000;
+    color: #CCCCCC;
+    float: right;
+    text-align: center;
+    box-shadow: none;
+    border: none;
+    border-radius: 0.5rem;
+}
+.title{
+    display: inline-flex;
+    width: 100%;
+}
+h3{
+    width: 90%;
+}
 .card{
     width: 18rem;
+    margin: 1rem;
 }
 .add, .minus{
     border: none;
