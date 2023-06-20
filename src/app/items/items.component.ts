@@ -11,6 +11,8 @@ import { AllfrutisService } from '../allfrutis.service';
 export class ItemsComponent implements OnInit{
   itemCount:number =  0;
   fruits: Fruits[] = [];
+  checkoutList:any = [];
+  
 
   @ViewChild(CheckoutComponent) refCheckout!: CheckoutComponent;
 
@@ -23,14 +25,23 @@ export class ItemsComponent implements OnInit{
     this.fruits = this.allf.getAll();
   }
 
-  addItem(): void{
-    this.itemCount++;
+  addItem(item:any): void{
+   let name;
+   let count;
+  
+   this.checkoutList.push(item.id);
+
+   this.itemCount++;  
+    
+
   }
 
   removeItem(event:any){
     this.itemCount = event;
   }
-  remove(){
-    this.refCheckout.removeItem();
+  remove(item:any){
+    this.itemCount--;
+    this.checkoutList
+    // this.refCheckout.removeItem();
   }
 }

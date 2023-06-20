@@ -1,17 +1,18 @@
 <div class="itemPage">
   <div class="title">
     <h3>Add items to the cart</h3>
-    <button class="check"  (click)="addItem()">CheckOut</button>
+    <h3>{{itemCount}}</h3>
+    <!-- <button class="check"  (click)="addItem()">CheckOut</button> -->
   </div>
-<app-checkout #checkoutRef *ngIf="itemCount" [addList]="itemCount" (updateItem)="removeItem($event)"></app-checkout>
+<!-- <app-checkout #checkoutRef *ngIf="itemCount" [addList]="itemCount" (updateItem)="removeItem($event)"></app-checkout> -->
 <h2>Items List</h2>
 <div class="row">
   <div class="card" *ngFor="let fruit of fruits">
     <img class="card-img-top" src={{fruit.imageURL}} alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{fruit.name}}</h5>
-       <div class="actions"><button class="add" (click)="addItem()"><img src="assets/icons8-add-30.png" alt="additem"></button>{{fruit.price}}
-      <button class="minus" (click)="remove()"><img src="assets/icons8-minus-30.png" alt="removeitem"></button></div>
+       <div class="actions"><button class="add" (click)="addItem(fruit)"><img src="assets/icons8-add-30.png" alt="additem"></button>{{fruit.price}}
+      <button class="minus" (click)="remove(fruit)"><img src="assets/icons8-minus-30.png" alt="removeitem"></button></div>
     </div>
   </div>
 </div>
