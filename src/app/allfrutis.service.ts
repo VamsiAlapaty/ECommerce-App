@@ -6,7 +6,22 @@ import { Fruits } from './data/fruitsList/fruits';
 })
 export class AllfrutisService {
 
+  checklist:Fruits[] = [];
+
   constructor() { }
+
+  getItem(){
+    return this.checklist;
+  }
+
+  sendItem(value: any){
+    if(this.checklist.includes(value)){
+      value.count++
+      // this.checklist.push(value);
+    }else{
+      this.checklist.push(value);
+    }
+  }
 
   getAll(): Fruits[]{
     return [
@@ -14,49 +29,57 @@ export class AllfrutisService {
         id: 1,
         name: 'Apple',
         price: 2.49,
-        imageURL: 'assets/apple.jpg'
+        imageURL: 'assets/apple.jpg',
+        count: 1
       },
       {
         id: 2,
         name: 'Oranges',
         price: 1.49,
-        imageURL: 'assets/Oranges.jpg'
+        imageURL: 'assets/Oranges.jpg',
+        count: 1
       },
       {
         id: 3,
         name: 'Bananas',
         price: 0.49,
-        imageURL: 'assets/Bananas.jpg'
+        imageURL: 'assets/Bananas.jpg',
+        count: 1
       },
       {
         id: 4,
         name: 'Dragon Fruit',
         price: 2.49,
-        imageURL: 'assets/dragonFruit.jpg'
+        imageURL: 'assets/dragonFruit.jpg',
+        count: 1
       },
       {
         id: 5,
         name: 'Strawberry',
         price: 2.49,
-        imageURL: 'assets/strawberry.jpg'
+        imageURL: 'assets/strawberry.jpg',
+        count: 1
       },
       {
         id: 6,
         name: 'Kiwi',
         price: 2.49,
-        imageURL: 'assets/Kiwi.jpg'
+        imageURL: 'assets/Kiwi.jpg',
+        count: 1
       },
       {
         id: 7,
         name: 'Watermelon',
         price: 2.49,
-        imageURL: 'assets/watermelon.jpg'
+        imageURL: 'assets/watermelon.jpg',
+        count: 1
       },
       {
         id: 8,
         name: 'Grapes',
         price: 1.79,
-        imageURL: 'assets/grapes.jpg'
+        imageURL: 'assets/grapes.jpg',
+        count: 1
       }
     ]
   }

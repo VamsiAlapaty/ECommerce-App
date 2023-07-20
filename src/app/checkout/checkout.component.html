@@ -1,4 +1,11 @@
-<p>checkout works!</p>
+<!-- <p>checkout works!</p>
 <h2>Checkout Items List {{addList}}</h2>
 <button>Add</button>
-<button class="btn btn-primary" (click)="removeItem()">Remove</button>
+<button class="btn btn-primary" (click)="removeItem()">Remove</button> -->
+
+<div class="checkoutPage">
+    <button (click)="navItem()">Back to items</button>
+    <div class="card" *ngFor = "let fl of finalList">
+        {{fl.name}} {{fl.count}}
+    </div>
+</div>

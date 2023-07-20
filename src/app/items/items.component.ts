@@ -28,6 +28,8 @@ export class ItemsComponent implements OnInit{
   addItem(item:any): void{
    let name;
    let count;
+
+   this.allf.sendItem(item);
   
    this.checkoutList.push(item.id);
 

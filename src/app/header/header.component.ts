@@ -9,10 +9,17 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
+  nav = 'Checkout';
   constructor(private http: HttpClient, private router: Router){}
 
   openTodo(){
-    this.router.navigate(['/todoList']);
+    if(this.nav == 'Checkout'){
+      this.router.navigate(['/checkout']);
+      this.nav = 'Back to items';
+    }else{
+      this.router.navigate(['/items']);
+      this.nav = 'Checkout'
+    }
   }
 
 }
