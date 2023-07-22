@@ -7,21 +7,37 @@
     <button (click)="navItem()">Back to items</button>
 </div>
 
+
 <div class="container">
     <div class="row">
       <div class="col-8">
         <!-- Content -->
-        <div class="card" *ngFor = "let fl of finalList">
+        <div *ngIf="checkoutCount; else noItems">
+          <div class="card" *ngFor = "let fl of finalList">
             <div class="card-title ">{{fl.name}}</div>
              {{fl.count}}
         </div>
+        </div>
+        <ng-template #noItems>
+          <div class="card">
+            <div class="card-title ">Your cart is empty</div>
+        </div>
+        </ng-template>
+        
       </div>
       <div class="col-4">
         <!-- Content -->
         <div class="card">
-            Total
+            Total Price
         </div>
       </div>
     </div>
   </div>
+
+  <ng-template #empList>
+    <div class="card">
+      <div class="card-title">Your cart is empty.</div>
+    </div>
+  </ng-template>
+  
   
