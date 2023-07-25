@@ -2,3 +2,24 @@
     background-color: #CCCCCC;
     padding: 0rem 6rem 0rem 6rem;
 }
+
+.container{
+    padding: 1%;
+}
+
+p{
+    padding: 0.5rem;
+}
+.col-3{
+    text-align: center;
+    padding: 2px 0;
+}
+.btn{
+    border-color: #CCCCCC;
+}
+.btn:hover{
+    background-color: #CCCCCC;
+}
+
+
+

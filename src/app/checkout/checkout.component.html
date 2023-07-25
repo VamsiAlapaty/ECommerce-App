@@ -3,19 +3,37 @@
 <button>Add</button>
 <button class="btn btn-primary" (click)="removeItem()">Remove</button> -->
 
-<div class="checkoutPage">
-    <button (click)="navItem()">Back to items</button>
-</div>
-
-
 <div class="container">
     <div class="row">
       <div class="col-8">
         <!-- Content -->
         <div *ngIf="checkoutCount; else noItems">
           <div class="card" *ngFor = "let fl of finalList">
-            <div class="card-title ">{{fl.name}}</div>
-             {{fl.count}}
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Name</th>
+                  <th>Items Count</th>
+                  <th>Price</th>
+                  <th>Update Item</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>{{fl.name}}</td>
+                  <td>{{fl.count}}</td>
+                  <td>{{fl.price}}*{{fl.count}}</td>
+                  <td><button type="button">Add</button><button type="button">Remove</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row">
+              <div class="col-3">{{fl.name}}</div>
+              <div class="col-3">{{fl.count}}</div>
+              <div class="col-3"><button type="button" class="btn">Add</button></div>
+              <div class="col-3"><button type="button" class="btn">Remove</button></div>
+            </div>
         </div>
         </div>
         <ng-template #noItems>
