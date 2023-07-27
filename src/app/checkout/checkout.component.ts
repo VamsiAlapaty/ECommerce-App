@@ -13,6 +13,7 @@ export class CheckoutComponent {
     @Output() updateItem = new EventEmitter();
     finalList:Fruits[] = [];
     display = true;
+    sum = '';
     checkoutCount:boolean = false;
 
     constructor(private router: Router, private allf: AllfrutisService){}
@@ -22,7 +23,29 @@ export class CheckoutComponent {
       if(this.finalList.length != 0){
         this.checkoutCount = true;
       }
+      this.totalMethd();
     }
+
+    totalMethd(){
+      this.finalList.forEach((element) => {
+        element.id = element.count * element.price;
+      });
+
+      this.finalPrice();
+    }
+
+    finalPrice(){
+      let newarray: number[]= [];
+      let value = 0;
+      this.finalList.map((element) => {
+          newarray.push(element.id);
+      })
+
+      value = newarray.reduce((partialSum, a) => partialSum + a, 0);
+
+      this.sum = value.toFixed(2);
+    }
+    
 
     removeItem(){
       this.addList = Math.abs(this.addList - 1);

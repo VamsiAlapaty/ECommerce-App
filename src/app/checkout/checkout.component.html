@@ -20,7 +20,7 @@
               <tbody>
                 <tr *ngFor="let fl of finalList">
                   <!-- <th scope="row">1</th> -->
-                  <td>{{fl.name}}</td>
+                  <td><img src={{fl.imageURL}} alt={{fl.name}}>{{fl.name}}</td>
                   <td>{{fl.count}}</td>
                   <td>{{fl.price}}</td>
                   <td><button type="button" class="btn">Add</button>
@@ -41,8 +41,9 @@
         <div class="card">
             <p>Total Price</p>
           <div class="card-body" *ngFor="let pl of finalList">
-            {{pl.price}} * {{pl.count}}
+            {{pl.price}} * {{pl.count}} = {{pl.id}}
           </div>
+          <p>{{sum}}</p>
         </div>
       </div>
     </div>

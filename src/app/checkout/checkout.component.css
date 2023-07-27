@@ -6,7 +6,9 @@
 .container{
     padding: 1%;
 }
-
+tr{
+    height: 5px;
+}
 p{
     padding: 0.5rem;
 }
