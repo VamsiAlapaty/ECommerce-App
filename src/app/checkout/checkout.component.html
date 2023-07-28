@@ -23,7 +23,7 @@
                   <td><img src={{fl.imageURL}} alt={{fl.name}} class="cheOut">{{fl.name}}</td>
                   <td>{{fl.count}}</td>
                   <td>{{fl.price}}</td>
-                  <td><button type="button" class="btn">Add</button>
+                  <td><button type="button" class="btn" (click)="addItem(fl)">Add</button>
                     <button type="button" class="btn" (click)="removeItem(fl)">Remove</button></td>
                 </tr>
               </tbody>

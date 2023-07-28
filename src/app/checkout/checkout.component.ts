@@ -45,6 +45,10 @@ export class CheckoutComponent {
       this.sum = value.toFixed(2);
     }
     
+    addItem(event:any){
+        event.count++;
+        this.ngOnInit();
+    }
     
     removeItem(event:any){ 
       if(event.count > 1){
