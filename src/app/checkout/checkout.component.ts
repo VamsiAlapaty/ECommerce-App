@@ -42,14 +42,18 @@ export class CheckoutComponent {
       })
 
       value = newarray.reduce((partialSum, a) => partialSum + a, 0);
-
       this.sum = value.toFixed(2);
     }
     
-
-    removeItem(){
-      this.addList = Math.abs(this.addList - 1);
-     this.updateItem.emit(this.addList);
+    
+    removeItem(event:any){ 
+      if(event.count > 1){
+        event.count--;
+      }else if(event.count == 1){
+        let i = this.finalList.indexOf(event);
+        this.finalList.splice(i,i+0);
+      }
+     this.ngOnInit();
     }
 
     totalAmount(){

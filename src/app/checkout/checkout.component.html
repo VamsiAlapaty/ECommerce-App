@@ -20,11 +20,11 @@
               <tbody>
                 <tr *ngFor="let fl of finalList">
                   <!-- <th scope="row">1</th> -->
-                  <td><img src={{fl.imageURL}} alt={{fl.name}}>{{fl.name}}</td>
+                  <td><img src={{fl.imageURL}} alt={{fl.name}} class="cheOut">{{fl.name}}</td>
                   <td>{{fl.count}}</td>
                   <td>{{fl.price}}</td>
                   <td><button type="button" class="btn">Add</button>
-                    <button type="button" class="btn">Remove</button></td>
+                    <button type="button" class="btn" (click)="removeItem(fl)">Remove</button></td>
                 </tr>
               </tbody>
             </table>
